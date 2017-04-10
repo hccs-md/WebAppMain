@@ -1,0 +1,59 @@
+﻿@using WebAppMain.Resources
+@model WebAppMain.Models.CurriculumViewModel
+
+
+<table class="table-hover">
+    <tr>
+        <th>@Resource.thClassName</th>
+        <th>@Resource.thClassTime</th>
+        <th>@Resource.thCampus</th>
+        <th>@Resource.thClassroom</th>
+        <th>@Resource.thTextbook</th>
+        <th>@Resource.thTeacher</th>
+        <th>@Resource.thRegistrationFee</th>
+        <th>@Resource.thTuition</th>
+        <th>@Resource.thTextbookFee</th>
+        <th>@Resource.thMinimumAge</th>
+    </tr>
+@foreach(var elm in Model.SchedulesInThisYear)
+{
+
+    var teacher = Model.TeachersInThisYear.FirstOrDefault(t => t.PersonID == elm.TeacherID);
+    var contact = Model.TeacherContacts.FirstOrDefault(t => t.PersonID == elm.TeacherID);
+    var course = Model.CoursesInThisYear.FirstOrDefault(t => t.CourseID == elm.CourseID);
+    var book = Model.BooksInThisYear.FirstOrDefault(t => t.TextbookID == elm.TextbookID);
+    var room = Model.RoomsInThisYear.FirstOrDefault(t => t.ClassroomID == elm.ClassroomID);
+
+    if(teacher == null || contact == null || course == null || book == null || room == null)
+    {
+        continue;
+    }
+    <tr>
+        @if (ViewBag.LangCode == "en")
+        {
+            <td>@elm.ClassNameEnglish</td>
+        }
+        else
+        {
+            <td>@elm.ClassNameChinese</td>
+        }
+        <td>@elm.ClassTime</td>
+        <td>@room.Campus</td>
+        <td>@room.RoomNum</td>
+        
+        @if (ViewBag.LangCode == "en")
+        {
+            <td>@book.BookTitleEnglish</td>
+            <td><a href="mailto:@contact.Email">@teacher.FirstName, @teacher.LastName</a></td>
+        }
+        else { 
+            <td>@book.BookTitleChinese</td>
+            <td><a href="mailto:@contact.Email">@teacher.ChineseName</a></td>
+        }
+        <td>@course.RegistrationFee</td>
+        <td>@course.Tuition</td>
+        <td>@book.UnitPrice</td>
+        <td>@course.MinimumAge</td>
+    </tr>
+}
+</table>

@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNet.Identity
+@using WebAppMain.Resources
+@using WebAppMain.Helpers
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm(Resource.navLogoff, "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Url.LangSwitcher("English", ViewContext.RouteData, "en")</li>
+        <li>@Url.LangSwitcher("中文", ViewContext.RouteData, "zh")</li>
+        <li>
+            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Url.LangSwitcher("English", ViewContext.RouteData, "en")</li>
+        <li>@Url.LangSwitcher("中文", ViewContext.RouteData, "zh")</li>
+        <li>@Html.ActionLink(Resource.navRegister, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink(Resource.navLogin, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

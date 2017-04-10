@@ -1,0 +1,54 @@
+﻿@using WebAppMain.Resources
+@model WebAppMain.Models.CurriculumViewModel1
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2> @Resource.navCurriculum (@Model.SchoolYear)</h2>
+
+            <div style="margin-top: 20px;">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#sat" aria-controls="sat" role="tab" data-toggle="tab"><b>周六课程</b></a></li>
+                    <li role="presentation"><a href="#sun" aria-controls="sun" role="tab" data-toggle="tab"><b>周日课程</b></a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="sat">
+                        <h3>中文课</h3>
+                        <table class="table table-striped" style="margin: 20px; width: 95%;"></table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="sun">
+                        <h3>中文课</h3>
+                        <table class="table table-striped" style="margin: 20px; width: 95%;"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts
+{
+<script>
+    $(function() {
+        var baseURL = 'http://yourdomain.com/ajax/';
+        //load content for first tab and initialize
+        $('#home').load(baseURL+'home', function() {
+            $('#myTabs').tab(); //initialize tabs
+        });
+        $('#myTabs').bind('show', function(e) {
+           var pattern=/#.+/gi //use regex to get anchor(==selector)
+           var contentID = e.target.toString().match(pattern)[0]; //get anchor
+           //load content for selected tab
+            $(contentID).load(baseURL+contentID.replace('#',''), function(){
+                $('#myTabs').tab(); //reinitialize tabs
+            });
+        });
+    });
+</script>
+}
+

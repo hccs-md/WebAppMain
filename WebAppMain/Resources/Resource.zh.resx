@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="hdRecentUpdate" xml:space="preserve">
+    <value>新闻</value>
+  </data>
+  <data name="htHotTopics" xml:space="preserve">
+    <value>热门话题</value>
+  </data>
+  <data name="navCalendar" xml:space="preserve">
+    <value>校历</value>
+  </data>
+  <data name="navContactUs" xml:space="preserve">
+    <value>联系我们</value>
+  </data>
+  <data name="navCurriculum" xml:space="preserve">
+    <value>课程表</value>
+  </data>
+  <data name="navHome" xml:space="preserve">
+    <value>首页</value>
+  </data>
+  <data name="navLogin" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="navLogoff" xml:space="preserve">
+    <value>注销</value>
+  </data>
+  <data name="navRegister" xml:space="preserve">
+    <value>注册</value>
+  </data>
+  <data name="schoolyear" xml:space="preserve">
+    <value>学年</value>
+  </data>
+  <data name="SiteName" xml:space="preserve">
+    <value>哈维中文学校</value>
+  </data>
+  <data name="thClassCapacity" xml:space="preserve">
+    <value>班容量</value>
+  </data>
+  <data name="thClassName" xml:space="preserve">
+    <value>课程名</value>
+  </data>
+  <data name="thClassroom" xml:space="preserve">
+    <value>教室</value>
+  </data>
+  <data name="thClassTime" xml:space="preserve">
+    <value>授课时间</value>
+  </data>
+  <data name="thDate" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="thMinimumAge" xml:space="preserve">
+    <value>最小年龄</value>
+  </data>
+  <data name="thNotes" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="thRegistrationFee" xml:space="preserve">
+    <value>注册费</value>
+  </data>
+  <data name="thTeacher" xml:space="preserve">
+    <value>任课老师</value>
+  </data>
+  <data name="thTextbook" xml:space="preserve">
+    <value>教材</value>
+  </data>
+  <data name="thTextbookFee" xml:space="preserve">
+    <value>教材费</value>
+  </data>
+  <data name="thTuition" xml:space="preserve">
+    <value>学费</value>
+  </data>
+  <data name="thWeek" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="navAboutUs" xml:space="preserve">
+    <value>关于我们</value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>确认新密码</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>确认密码</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>现有密码</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>电子邮件</value>
+  </data>
+  <data name="forget_password" xml:space="preserve">
+    <value>忘记账户密码？</value>
+  </data>
+  <data name="Must_be_at_least_6_char" xml:space="preserve">
+    <value>密码太短，要求至少6个字节！</value>
+  </data>
+  <data name="navMyAcct" xml:space="preserve">
+    <value>我的账户</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>新密码</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="Password_must_match" xml:space="preserve">
+    <value>新旧密码不一致</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="reg_as_a_new_user" xml:space="preserve">
+    <value>注册新账户</value>
+  </data>
+  <data name="thCampus" xml:space="preserve">
+    <value>校区</value>
+  </data>
+  <data name="btnMore" xml:space="preserve">
+    <value>查看详情</value>
+  </data>
+  <data name="lblSubscribe" xml:space="preserve">
+    <value>订阅我们的电子邮件周报</value>
+  </data>
+  <data name="navActivities" xml:space="preserve">
+    <value>各类活动</value>
+  </data>
+  <data name="navClasses" xml:space="preserve">
+    <value>课程安排</value>
+  </data>
+  <data name="navClassIntro" xml:space="preserve">
+    <value>课程介绍</value>
+  </data>
+  <data name="navForms" xml:space="preserve">
+    <value>各类表格</value>
+  </data>
+  <data name="navRules" xml:space="preserve">
+    <value>规章制度</value>
+  </data>
+  <data name="navSchoolInfo" xml:space="preserve">
+    <value>学校信息</value>
+  </data>
+  <data name="navSchoolIntro" xml:space="preserve">
+    <value>学校介绍</value>
+  </data>
+  <data name="navSchoolTeam" xml:space="preserve">
+    <value>管理团队</value>
+  </data>
+  <data name="btnSubscribe" xml:space="preserve">
+    <value>订阅</value>
+  </data>
+  <data name="navClub" xml:space="preserve">
+    <value>社团</value>
+  </data>
+  <data name="navCommunity" xml:space="preserve">
+    <value>活动及社团</value>
+  </data>
+  <data name="navSchoolActivities" xml:space="preserve">
+    <value>学校活动</value>
+  </data>
+  <data name="txtLoginPrompt" xml:space="preserve">
+    <value>请用您HCCS账户登录</value>
+  </data>
+</root>

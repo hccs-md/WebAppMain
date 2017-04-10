@@ -1,0 +1,105 @@
+﻿@using WebAppMain.Resources
+@using WebAppMain.Helpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - HCCS</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(Resource.navHome, "Index", "Home")</li>
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Resource.navSchoolInfo<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink(Resource.navSchoolIntro, "About", "Home")</li>
+                            <li role="separator" class="divider"></li>
+                            <li>@Html.ActionLink(Resource.navSchoolTeam, "Team", "School")</li>
+                            <li role="separator" class="divider"></li>
+                            <li>@Html.ActionLink("PTA/SGA", "Pta", "School")</li>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Resource.navClasses<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink(Resource.navClassIntro, "ClassesIntro", "School")</li>
+                            <li role="separator" class="divider"></li>
+                            <li>@Html.ActionLink(Resource.navCurriculum, "Index", "Curriculum")</li>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink(Resource.navCalendar, "Calendar", "Home")</li>
+                    @*<li class="divider-vertical"></li>
+                        <li><a href="ch_registration.php">学生注册</a></li>*@
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink(Resource.navRules, "Policies", "School")</li>
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Resource.navCommunity<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink(Resource.navSchoolActivities, "Activities", "School")</li>
+                        <li role="separator" class="divider"></li>
+                        <li>@Html.ActionLink(Resource.navClub, "Clubs", "School")</li>
+                    </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li class="divider-vertical"></li>
+                    <li>@Html.ActionLink(Resource.navForms, "Forms", "School")</li>
+                </ul>
+
+                 @Html.Partial("_LoginPartial")
+
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="center-block">
+                <img class="img-responsive" src="~/Content/Images/hccs_banner.png" />
+                <hr class="banner" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="row">
+                <div class="col-xs-6">
+                    <p>&copy; @DateTime.Now.Year - @Resource.SiteName</p>
+                </div>
+                <div class="col-xs-6">
+                    <ul class="nav nav-pills pull-right">
+                        <li>@Url.LangSwitcher("English", ViewContext.RouteData, "en")</li>
+                        <li>@Url.LangSwitcher("中文", ViewContext.RouteData, "zh")</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

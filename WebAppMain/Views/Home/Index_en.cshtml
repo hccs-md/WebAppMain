@@ -1,0 +1,75 @@
+﻿@using WebAppMain.Resources
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="container">
+    <div class="row">
+
+        @Html.Partial("_carousel")
+
+        <div class="col-md-8">
+            <h3>About Howard County Chinese School</h3>
+            <p>Howard County Chinese School (HCCS), located in Howard County, MD, is a non-profit, non-political, and non-religious school established in 1998 to promote Chinese culture and language through high-quality educational and cultural classes. The school also serves as a link between parents and the Chinese community.</p>
+            <p>Classes are offered on Saturdays at Centennial High School, and Sundays at Howard Community College, with a total enrollment of over a 1,000 students. HCCS is a member of the Chinese School Association of the United States (CSAUS).</p>
+            <a class="btn btn-default" href="@Url.Action("About", "Home")" role="button">@Resource.btnMore  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+
+        </div>
+
+
+    </div>
+
+    <hr />
+
+    <div class="row">
+
+        <div class="col-md-7 left_panel">
+            <h3>School News</h3>
+            <p>Dear HCCS Parents and Students,</p>
+            <p>As we approach the end of the 2016-2017 school year and anticipate the arrival of summer vacation, I would like to introduce you to our updated school website.  The revised website has a new look and a bilingual version of the content. </p>
+            <p>The efforts toward revising our website are in the hope that the new format can provide a clear window into our school and the Chinese language and cultural learning opportunities that we offer.  I would like to thank all those that have contributed to the revision work!</p>
+            <p>Our school continues to make great progress and achievements thanks to the talent and hard work of the teachers, staff and Board of Directors as well as the continuous support and involvement from our parents and community.  I would like to share here with you the latest news regarding school development.</p>
+            <p>In the 2016 HCCS Five-Year Strategic Planning Survey, about 30% of the parents who participated demonstrated a preference for Saturday classes.  The HCCS Board of Directors passed a resolution to offer the Saturday classes, at Centennial High Schoolbeginning in the fall of 2017.  The Sunday classes will remain at Howard Community College.  We elected to move to Centennial High School from the current Catonsville Community College location for Saturday classes because Centennial High School is a more convenient location.  The HCCS Executive Committee is in the process of implementing the resolution. You will be informed any changesprior to the May registration period.If you have any questions, concerns or suggestions, please do not hesitate to email the Board of Directors at bod@hccs-md.org.</p>
+            <p>I look forward to continuing to do my best to serve you in the coming year.</p>
+            <p>Sincerely,<br>Jia Bei Wang, HCCS Principal</p>
+
+        </div>
+
+        <div class="col-md-5">
+
+            <p class="green"><b><span class="glyphicon glyphicon-leaf orange" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;What is minimum age requirement at school?</b></p>
+            <p>All classes have a minimum age requirement. A minimum age of 4 years old by September 1 of that year is required for Pre-K classes; a minimum age of 5 years old by September 1 of that year is required for K classes. Students whose birthdays are from Sep 2 to October 31 will be given an opportunity to interview to determine eligibility.</p>
+
+            <p class="green"><b><span class="glyphicon glyphicon-leaf orange" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;What is the class schedule, and where are classes held?</b></p>
+            <p>HCCS classes are held on Saturdays from 12pm to 5pm at Centennial High School, and on Sundays from 10am to 4pm at the Howard County Community College.</p>
+
+            <p class="green"><b><span class="glyphicon glyphicon-leaf orange" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;We do not speak Chinese in our family. What classes do you recommend?</b></p>
+            <p>We recommend the student try our bilingual classes. The minimum age requirement for this class is 5 years old. This Level I class is designed for beginners.</p>
+
+            <p class="green"><b><span class="glyphicon glyphicon-leaf orange" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;What textbooks are used in the classes?</b></p>
+            <p>Most of our classes fall into one of two tracks. One track uses the Standard Chinese textbooks published by The People’s Education Press, and the other track uses textbooks by Ma Liping. The textbook for bilingual classes is Happy Chinese, which is designed for non-Chinese language learners by the Chinese National Office for Teaching Chinese as a Foreign Language (Hanban). It provides students with both pinyin and English translations.</p>
+
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-sm-12">
+                    <form class="form-inline" action="http://groups.google.com/group/hccs-allschool/boxsubscribe">
+                        <div class="form-group">
+                            <label for="emailconf">@Resource.lblSubscribe:&nbsp;&nbsp;</label>
+                            <input type="email" class="form-control" name="email" id="emailconf" placeholder="Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-default" value="Subscribe" name="sub">@Resource.btnSubscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    @section scripts
+{
+        <script>
+            $('.carousel').carousel({
+                interval: false
+            })
+        </script>
+    }

@@ -1,0 +1,72 @@
+﻿@using WebAppMain.Resources
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="container">
+    <div class="row">
+
+        @Html.Partial("_carousel")
+
+        <div class="col-md-8">
+            <h3>关于哈维中文学校</h3>
+            <p>哈维中文学校(HCCS)成立于1998年12月，座落在哈维郡哥伦比亚市，是一所在马里兰州注册的非营利性，非政治性，非宗教性的中文学校, 也是当地规模最大，师资最雄厚，课程最全面的中文学校。学校的办学宗旨是教育下一代学习中文，促进家长之间的互相交流，弘扬中华民族和语言文化。</p>
+            <p>
+                哈维中文学校招收年满五岁以上中外儿童和成人学生，教授普通话，汉语拼音及简体字。学校设有从幼大班至十年级中文班。
+                另有绘画，儿童及成人舞蹈和合唱，Zumba 健身舞，瑜伽，武术，太极，高中物理竞赛，奥林匹克数学，高中数学竞赛, 机器人等多中选修课。
+            </p>
+            <a class="btn btn-default" href="@Url.Action("About", "Home")" role="button">@Resource.btnMore  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+
+        </div>
+
+
+    </div>
+
+    <hr />
+
+    <div class="row">
+
+        <div class="col-md-7 left_panel">
+                <h3>最新动态</h3>
+                <p>亲爱的同学们、家长们，大家好！</p>
+                <p>在2016-2017 学年的中文学习既将结束，大家都在翘首盼望快乐暑假到来之际，学校的新版网站开通了，首先请允许我向参予网站改版所有工作人员。 希望新版网站能为大家提供一个更便捷的信息交流平台。</p>
+                <p>哈维中文学校在全体教职人员、董事会成的努力工作和家长们以及关心学校发展的朋友热心帮助下一如继往地蓬勃发展。在这里，我与大家分享一则有关学校发展的最新信息：</p>
+                <p>在2016 年哈维中文学校的五年计划调查问卷里，有近3成的家长们表示希望参加周六班。为满足家长们的要求，为社区提供更好更方便的服务，哈维中文学校董事会决议自2017年秋季学期开始，在Centennial High School 开办周六班，Howard Community College 的周日班不变，Catonsville Community College 由于位置对多数家长不方便，将不再租用。具体工作，包括课程设置，师资分配等正在进行中。 校委会将于五月注册前发出具体通知，敬请期待。如对此决议有任何意见建议，请与董事会联系：bod@hccs-md.org。</p>
+                <p>谢谢大家！</p>
+                <p>哈维中文学校校长：王家蓓</p>
+        </div>
+
+        <div class="col-md-5">
+
+            <p>哈维中文学校每年组织的“寻根夏令营活动”都得到了同学们和家长们的热烈欢迎。今年,学校将继续组织“寻根夏令营活动”,目前已成行的有山东莱芜夏令营和云南德宏夏令营。</p>
+
+            <p class="green"><b><span class="glyphicon glyphicon-check orange" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;山东莱芜夏令营</b></p>
+            <p>日“山东莱芜夏令营”。山东莱芜夏令营可以说是齐鲁文化之行。 通过这个夏令营,孩子们有机会参观和了解孔子的故乡曲阜、实地理解和感受"泰山独尊五岳"泰山文化、了解和参观自"尧舜禹时代"就在中国史上留下浓重笔墨的"泉城"济南,还有很多其它的丰富内容。</p>
+
+            <p class="green"><b><span class="glyphicon glyphicon-check orange" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;云南德宏夏令营</b></p>
+            <p>月底前后的“云南德宏夏令营”。云南德宏有傣族、景颇族、阿昌族、德昂族、傈僳族 5 个世居少数民族,区域涵盖中国咖啡之乡州府芒市、东方珠宝城瑞丽、目瑙纵歌之乡陇川、中华翡翠毛料城盈江、葫芦丝之乡梁河。 通过德宏之行,孩子们可以感受和了解西南部少数民族地区的文化和自然风光。</p>
+            
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-sm-12">
+                    <form class="form-inline" action="http://groups.google.com/group/hccs-allschool/boxsubscribe">
+                        <div class="form-group">
+                            <label for="emailconf">@Resource.lblSubscribe:&nbsp;&nbsp;</label>
+                            <input type="email" class="form-control" name="email" id="emailconf" placeholder="Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-default" value="Subscribe" name="sub">@Resource.btnSubscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+@section scripts
+{
+    <script>
+        $('.carousel').carousel({
+            interval: false
+          })
+    </script>
+}

@@ -1,0 +1,163 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+.navbar-collapse { max-height: 100% !important; }
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.navbar-inverse {
+  background-color: #1b886b;
+  border-color: transparent;
+}
+
+.navbar .divider-vertical {
+  height: 50px;
+  margin: 0px;
+}
+
+.navbar-inverse .divider-vertical {
+  border-right: 1px solid #e5e5e5;
+  border-left: 0px solid #e5e5e5;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+
+@media (max-width: 767px) {
+.navbar-collapse .nav > .divider-vertical {
+    display: none;
+  }
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+}
+
+hr.banner {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+}
+
+hr.space {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+}
+
+h2 {
+  /*color: #f98107;*/
+  color: #1b886b;
+}
+
+h3 {
+  color: #1b886b;
+  /*color: #669933;*/
+}
+
+h4 {
+  color: #1b886b;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.green {
+  color: #1b886b;
+  /*color: #6b911c;*/
+}
+
+.orange {
+  color: #f98107;
+}
+
+.indent {
+  margin-left: 30px;
+}
+
+table caption {
+  font-size: 18px;
+  color: #1b886b;
+  font-weight: 100;
+}
+
+.left_panel {
+  border: 0;
+  background-color: #ffffff;
+  border-right: 1px solid #cccccc;
+}
+
+.right_panel {
+  border: 0;
+  background-color: #ffffff;
+  border-left: 1px solid #cccccc;
+}
+
+.gray_panel {
+  background-color: #f6f6f6;
+  padding: 10px; 
+}
+
+.eventlist {   
+     margin:0; padding:0;
+     text-align: left;
+}
+     
+.eventlist > li {
+     list-style-type: none;
+     padding-top: 0;  
+     padding-left: 90px;
+     margin-bottom: 15px;
+     position: relative;
+}
+     
+.eventlist > li:before {
+     position: absolute;
+     margin: -4px 0 0 -75px;
+     padding: 0;
+     min-height: 30px; 
+     vertical-align: middle;
+     content: "\e109";
+     font-family: 'Glyphicons Halflings';
+     font-size: 40px;
+     float: left;
+     color: #669966;
+}
+
+table.pane {
+    border-collapse: separate;
+    border-spacing: 10px;
+    border: none;
+}
+
+td.pane_cell {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 15px;
+    margin: 20px;
+    font-size: 92%;
+    line-height: 160%;
+}
+
+table.form {
+  border: none;
+  margin-bottom: 20px;
+}
+table.form > tbody > tr >th {
+  text-align: center;
+}
+table.form > tbody > tr > td {
+  padding: 5px 10px 5px 10px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
+
+.small_font {
+  font-size: 90%;
+}
